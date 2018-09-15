@@ -37,7 +37,10 @@ test.py: error: too few arguments
 
 
 
-[DESCRIPTION]
+
+
+
+[DESCRIPTION in English]
 
 Parser analyzes access.log: collects source-ip, count of requests from each address.
 Each address is checked for its blacklist reputation here https://ip.pentestit.ru.
