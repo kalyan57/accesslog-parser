@@ -1,5 +1,7 @@
-For English description look down .
+For English description look down.
+
 [ОПИСАНИЕ]
+
 Парсер анализирует access.log: собирает source-ip, количество запросов с адреса.
 Далее проверяется репутация каждого найденного адреса на сервисе https://ip.pentestit.ru.
 Собранная информация сохраняется в CSV-файл, в базы MySQL и PostgreSQl.
@@ -8,6 +10,7 @@ For English description look down .
 	read_postgresql.py
 
 [Краткое описание файлов]
+
 README.txt		этот файл
 REQUIREMENTS.txt	перечень зависимостей - необходимых компонентов
 test.py			основной скрипт-парсер
@@ -18,6 +21,7 @@ my.sql			схема таблицы БД mysql
 access.log		образец лога для анализа
 
 [ЗАПУСК]
+
 для запуска необходимо указать файл анализируемого лога и выходной файл CSV:
 > python test.py access.log out.csv
 
@@ -27,12 +31,14 @@ usage: test.py [-h] in_file out_file
 test.py: error: too few arguments
 
 [ПРОВЕРКА]
+
 Данные анализа должны быть записаны в три разных хранилища: в базы Postgre и MySQL, и в файл CSV
 Данные из баз легко запросить скриптами read_mysql.py, read_postgresql.py - запускаются без параметров
 
 
 
 [DESCRIPTION]
+
 Parser analyzes access.log: collects source-ip, count of requests from each address.
 Each address is checked for its blacklist reputation here https://ip.pentestit.ru.
 Collected data is stored to CSV file, MySQL and PostgreSQl databases.
@@ -41,6 +47,7 @@ To facilitate reading data from databases two ancillary scripts were added:
 	read_postgresql.py
 
 [FILES]
+
 README.md		this file
 REQUIREMENTS.txt	requirements list - necessary libraries
 test.py			the parser itself
@@ -52,6 +59,7 @@ access.log		access.log example
 out.csv			out file example
 
 [USAGE]
+
 Submit access log file and out file to script:
 > python test.py access.log out.csv
 
@@ -61,5 +69,6 @@ usage: test.py [-h] in_file out_file
 test.py: error: too few arguments
 
 [ПРОВЕРКА]
+
 Collected data will be written to three different datasets: Postgre and MySQL databases and in a CSV file.
 You can get data from databases with help of ancillary scripts read_mysql.py, read_postgresql.py - run them without any args
